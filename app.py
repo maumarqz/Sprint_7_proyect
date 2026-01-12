@@ -4,10 +4,12 @@ import streamlit as st
 
 df_cars = pd.read_csv('vehicles_us.csv')
 st.header("Análisis Exploratorio de Datos")
-hist_button = st.button("Construir un histograma")
+# crear una casilla de verificación
+build_histogram = st.checkbox('Construir un histograma')
+# crear un botón
 scatter_button = st.button("Construir un diagrama de dispersión")
 
-if hist_button:  # Al hacer clic en el botón
+if build_histogram:  # Al hacer clic en el botón
     # escribir un mensaje
     st.write(
         "Creacion de un histograma para el conjunto de datos de anuncios de venta de coches.")
